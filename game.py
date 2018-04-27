@@ -67,7 +67,9 @@ class Board(Canvas):
         
         
     def createSnakes(self):
-        
+        self.snakes = range(50)
+        for i in range(len(self.snakes)):
+            self.snakes[i] = snake.Snake(10,10*i,3,100,50,1,0,bodyImage,headImage,10)
         
     def createApples(self):
         self.apple = ImageTk.PhotoImage(appleImage) 
